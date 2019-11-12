@@ -1,0 +1,14 @@
+Package: DBUmaps
+Type: Package
+Title: Caracterizacion Espacial de Suelos
+Version: 0.1.0
+Author: Diego E Bolivar V
+Maintainer: Diego Bolivar <diego.bolivar@uner.edu.ve>
+Description: Contiene Funcion que grafica mapas dinamicos con las caracteristicas de los suelos
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+NeedsCompilation: no
+Packaged: 2019-11-07 17:07:03 UTC; steff
+Built: R 3.6.1; ; 2019-11-07 17:08:58 UTC; windows

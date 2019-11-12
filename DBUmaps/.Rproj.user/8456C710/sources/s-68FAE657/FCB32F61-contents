@@ -1,0 +1,17 @@
+
+#library(leaflet)
+library(knitr)
+library(rmarkdown)
+library(PKI)
+library(packrat)
+library(base64enc)
+library(ggplot2)
+#library(ggmap)
+
+
+datosp<- read.csv("C:/Users/steff/OneDrive/Documents/Tesis Diego/PruebaDataFrame.txt",
+                  header = T,sep = ";")
+
+Nombre= datosp[1]
+print(Nombre)
+

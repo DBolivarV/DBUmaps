@@ -1,0 +1,64 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `DBUmaps'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\inputencoding{utf8}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Caracterizacion Espacial de Suelos}
+\item[Version]\AsIs{0.1.0}
+\item[Author]\AsIs{Diego E Bolivar V}
+\item[Maintainer]\AsIs{Diego Bolivar }\email{diego.bolivar@uner.edu.ve}\AsIs{}
+\item[Description]\AsIs{Contiene Funcion que grafica mapas dinamicos con las caracteristicas de los suelos}
+\item[License]\AsIs{GPL-2}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[RoxygenNote]\AsIs{6.1.1}
+\item[NeedsCompilation]\AsIs{no}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{Geomaps}{Grafica Mapas Con las caracteristicas de los suelos, usando la api de google maps, y una data dada}{Geomaps}
+%
+\begin{Description}\relax
+Grafica Mapas Con las caracteristicas de los suelos, usando la api de google maps, y una data dada
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+Geomaps(ApiKey, FileRoute, Rango1, Rango2, Rango3, Rango4, Rango5)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{ApiKey}] Kei of GoogleCloud
+
+\item[\code{FileRoute}] Route File
+
+\item[\code{Rango}] 
+\end{ldescription}
+\end{Arguments}
+\inputencoding{utf8}
+\HeaderA{package1}{DBUmaps Package}{package1}
+\aliasA{package1-package}{package1}{package1.Rdash.package}
+%
+\begin{Description}\relax
+Contiene Funcion que grafica mapas dinamicos con las caracteristicas de los suelos
+\end{Description}
+%
+\begin{Author}\relax
+Diego Bolivar \email{diego.bolivar@unet.edu.ve}
+\end{Author}
+\printindex{}
+\end{document}

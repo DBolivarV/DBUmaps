@@ -1,0 +1,41 @@
+#library(leaflet)
+library(knitr)
+library(rmarkdown)
+library(PKI)
+library(packrat)
+library(base64enc)
+library(ggplot2)
+#library(ggmap)
+
+
+datosp<- read.csv("C:/Users/steff/OneDrive/Documents/Tesis Diego/Prueba.txt",header = T,sep = ";")
+Localizacion= unique(datosp[1])
+#Direccion=$Localizacion
+Caracteristica=datosp[2]
+numero=5
+pp=Caracteristica[,1]
+print(ncol(datosp))
+columnas=ncol(datosp)
+if(numero> columnas)
+{
+  print("Vas bien Diego")
+}
+else 
+{
+  print("Cada vez mas cerca del titulo")
+}
+
+
+#pp<-Caracteristica
+#print(pp[10])
+#for (i in 1:length(Localizacion))
+#{
+ # pp=Caracteristica[i,]
+  #longitud <-c(lon[i])
+  #latitud <- c(lat[i])
+#}
+
+#parametro<-datosp[2]
+#print(Caracteristica)
+#print(Localizacion[6])
+#print(numeric(length(Localizacion)))

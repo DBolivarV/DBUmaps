@@ -1,0 +1,89 @@
+* using log directory 'C:/Users/steff/OneDrive/Escritorio/Paquete Final Tesis/DBUmaps.Rcheck'
+* using R version 3.6.1 (2019-07-05)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* checking for file 'DBUmaps/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'DBUmaps' version '0.1.0'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking whether package 'DBUmaps' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'library' or 'require' calls not declared from:
+  'PKI' 'base64enc' 'ggmap' 'ggplot2' 'knitr' 'leaflet' 'packrat'
+  'rmarkdown'
+'library' or 'require' calls in package code:
+  'PKI' 'base64enc' 'ggmap' 'ggplot2' 'knitr' 'leaflet' 'packrat'
+  'rmarkdown'
+  Please use :: or requireNamespace() instead.
+  See section 'Suggested packages' in the 'Writing R Extensions' manual.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+Geomaps: no visible global function definition for 'register_google'
+Geomaps: no visible global function definition for 'read.csv'
+Geomaps: no visible global function definition for 'geocode'
+Geomaps: no visible global function definition for '%>%'
+Geomaps: no visible global function definition for 'leaflet'
+Geomaps: no visible global function definition for 'addTiles'
+Geomaps: no visible global function definition for 'addCircleMarkers'
+Geomaps: no visible global function definition for 'popupOptions'
+Geomaps: no visible global function definition for 'addLegend'
+Undefined global functions or variables:
+  %>% addCircleMarkers addLegend addTiles geocode leaflet popupOptions
+  read.csv register_google
+Consider adding
+  importFrom("utils", "read.csv")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'Geomaps'
+  'Rango1' 'Rango2' 'Rango3' 'Rango4' 'Rango5'
+Documented arguments not in \usage in documentation object 'Geomaps':
+  'Rango'
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking Rd contents ... WARNING
+Argument items with no description in Rd object 'Geomaps':
+  'Rango'
+
+* checking for unstated dependencies in examples ... OK
+* checking examples ... NONE
+* checking PDF version of manual ... WARNING
+LaTeX errors when creating PDF version.
+This typically indicates Rd problems.
+* checking PDF version of manual without hyperrefs or index ... ERROR
+Re-running with no redirection of stdout/stderr.
+* DONE
+Status: 1 ERROR, 4 WARNINGs, 2 NOTEs

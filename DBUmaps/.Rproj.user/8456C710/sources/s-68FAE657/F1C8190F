@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1573145707466.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F1C8190F",
+    "lastKnownWriteTime" : 1573515139,
+    "last_content_update" : 1573515139484,
+    "path" : "C:/Users/steff/OneDrive/Escritorio/Paquete Final Tesis/DBUmaps/R/Geomaps.R",
+    "project_path" : "R/Geomaps.R",
+    "properties" : {
+        "cursorPosition" : "21,31",
+        "scrollLine" : "24",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
