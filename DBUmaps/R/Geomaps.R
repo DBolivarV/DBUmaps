@@ -3,11 +3,11 @@
 #' @param ApiKey Kei of GoogleCloud
 #' @param FileRoute Route File
 #' @param Elemento Patron que se quiere graficar
-#' @param Rango 4 rangos.
+#' @param Intervalo 4 Intervalos.
 #'
 #' @export
 
-Geomaps<- function(ApiKey, FileRoute,Elemento, Rango1, Rango2, Rango3, Rango4)
+Geomaps<- function(ApiKey, FileRoute,Elemento, Intervalo1, Intervalo2, Intervalo3, Intervalo4)
 
 {
   library(leaflet)
@@ -34,11 +34,11 @@ Geomaps<- function(ApiKey, FileRoute,Elemento, Rango1, Rango2, Rango3, Rango4)
   lon<-numeric(length(Direccion))
   lat<-numeric(length(Direccion))
 
-  legenda=sprintf(" < %d Muy Bajo", Rango1)
-  legenda2=sprintf(" %d a <%d Bajo", Rango1, Rango2)
-  legenda3=sprintf(" %d a <%d Medio", Rango2, Rango3)
-  legenda4=sprintf(" %d a <%d Alto", Rango3, Rango4)
-  legenda5=sprintf("  >%d Muy alto", Rango4)
+  legenda=sprintf("< %d Muy Bajo", Intervalo1)
+  legenda2=sprintf("[%d,%d) Bajo", Intervalo1, Intervalo2)
+  legenda3=sprintf("[%d,%d) Medio", Intervalo2, Intervalo3)
+  legenda4=sprintf("[%d,%d) Alto", Intervalo3, Intervalo4)
+  legenda5=sprintf(">= %d  Muy alto", Intervalo4)
 
   for (i in 1:length(Direccion))
   {
@@ -53,28 +53,28 @@ Geomaps<- function(ApiKey, FileRoute,Elemento, Rango1, Rango2, Rango3, Rango4)
     latitud <- c(lat[i])
   }
 
-  #ColorPa<-GenerarColor(FileRoute, Rango1, Rango2,Rango3,
-  #             Rango4,Rango5)
+  #ColorPa<-GenerarColor(FileRoute, Intervalo1, Intervalo2,Intervalo3,
+  #             Intervalo4,Intervalo5)
 
   for (i in 1:length(parametro))
   {
-    if (parametro[i]<Rango1)
+    if (parametro[i]<Intervalo1)
     {
       ColorP[i]="#0CFA04"
     }
-    else if(parametro[i]>=Rango1 & parametro[i]<Rango2)
+    else if(parametro[i]>=Intervalo1 & parametro[i]<Intervalo2)
     {
       ColorP[i]="#B7FA04"
     }
-    else if(parametro[i]>=Rango2 & parametro[i]<Rango3)
+    else if(parametro[i]>=Intervalo2 & parametro[i]<Intervalo3)
     {
       ColorP[i]="#FAE404"
     }
-    else if(parametro[i]>=Rango3 & parametro[i]<Rango4)
+    else if(parametro[i]>=Intervalo3 & parametro[i]<Intervalo4)
     {
       ColorP[i]="#FA7F04"
     }
-    else if(parametro[i]>Rango4)
+    else if(parametro[i]>=Intervalo4)
     {
       ColorP[i]="#FA0F04"
     }
@@ -84,11 +84,11 @@ Geomaps<- function(ApiKey, FileRoute,Elemento, Rango1, Rango2, Rango3, Rango4)
     }
 
   }
-  print(Rango1)
-  print(Rango2)
-  print(Rango3)
-  print(Rango4)
-  #print(Rango5)
+  print(Intervalo1)
+  print(Intervalo2)
+  print(Intervalo3)
+  print(Intervalo4)
+  #print(Intervalo5)
   print(ColorP)
 
   #color <- c(rep("red",10), rep("blue",10))
@@ -97,7 +97,7 @@ Geomaps<- function(ApiKey, FileRoute,Elemento, Rango1, Rango2, Rango3, Rango4)
   dataf <- data.frame(longitud, latitud, ColorP, tamano)
   leaflet(dataf) %>% addTiles() %>%
     addCircleMarkers(lng = lon,lat = lat,radius = 5,color = ColorP,
-                     popup =~paste(Direccion," ",Carac),
+                     popup =~paste(Direccion," -> ",Carac),
                      popupOptions = popupOptions(minWidth = 200, closeOnClick = TRUE))%>%
     addLegend("bottomright", colors = c("#0CFA04","#B7FA04","#FAE404","#FA7F04","#FA0F04"),
               labels =c(legenda,legenda2,legenda3,legenda4,legenda5),title = paste("Niveles de ",nombrescol[Elemento]))

@@ -10,7 +10,7 @@ library(mapview)
 
 ui <- dashboardPage(
 
-    dashboardHeader(title = "DBUMaps Api Web",dropdownMenu(type = "messages",
+    dashboardHeader(title = "DBUMaps Web",dropdownMenu(type = "messages",
                                                            messageItem(
                                                                from = "Departamento Informatica",
                                                                message = "Universidad del Tachira"
